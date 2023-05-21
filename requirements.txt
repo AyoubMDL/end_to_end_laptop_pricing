@@ -4,4 +4,7 @@ pandas
 numpy
 matplotlib
 seaborn
+xgboost
+lightgbm
+dill
 # -e .
