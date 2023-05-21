@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Learning Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Machine Learning Model</h1>
+    <h4>
+        The laptop price is {{results}} $
+    </h4>
+    <form action="/" method="POST">
+        <label for="brand">Brand:</label>
+        <select name="brand" id="brand" required>
+            <option value="ASUS">ASUS</option>
+            <option value="Lenovo">Lenovo</option>
+            <option value="acer">acer</option>
+            <option value="Avita">Avita</option>
+            <option value="HP">HP</option>
+            <option value="DELL">DELL</option>
+            <option value="MSI">MSI</option>
+            <option value="APPLE">APPLE</option>
+        </select><br>
+
+        <label for="processor_brand">Processor Brand:</label>
+        <select name="processor_brand" id="processor_brand" required>
+            <option value="Intel">Intel</option>
+            <option value="AMD">AMD</option>
+            <option value="M1">M1</option>
+        </select><br>
+
+        <label for="processor_name">Processor Name:</label>
+        <select name="processor_name" id="processor_name" required>
+            <option value="Core i3">Core i3</option>
+            <option value="Core i5">Core i5</option>
+            <option value="Celeron Dual">Celeron Dual</option>
+            <option value="Ryzen 5">Ryzen 5</option>
+            <option value="Core i7">Core i7</option>
+            <option value="Core i9">Core i9</option>
+            <option value="M1">M1</option>
+            <option value="Pentium Quad">Pentium Quad</option>
+            <option value="Ryzen 3">Ryzen 3</option>
+            <option value="Ryzen 7">Ryzen 7</option>
+            <option value="Ryzen 9">Ryzen 9</option>
+        </select><br>
+
+        <label for="processor_gnrtn">Processor Generation:</label>
+        <select name="processor_gnrtn" id="processor_gnrtn" required>
+            <option value="10th">10th</option>
+            <option value="Not Available">Not Available</option>
+            <option value="11th">11th</option>
+            <option value="7th">7th</option>
+            <option value="8th">8th</option>
+            <option value="9th">9th</option>
+            <option value="4th">4th</option>
+            <option value="12th">12th</option>
+        </select><br>
+
+        <label for="ram_gb">RAM (in GB):</label>
+        <select name="ram_gb" id="ram_gb" required>
+            <option value="4 GB">4 GB</option>
+            <option value="8 GB">8 GB</option>
+            <option value="16 GB">16 GB</option>
+            <option value="32 GB">32 GB</option>
+        </select><br>
+
+        <label for="ram_type">RAM Type:</label>
+        <select name="ram_type" id="ram_type" required>
+            <option value="DDR4">DDR4</option>
+            <option value="LPDDR4">LPDDR4</option>
+            <option value="LPDDR4X">LPDDR4X</option>
+            <option value="DDR5">DDR5</option>
+            <option value="DDR3">DDR3</option>
+            <option value="LPDDR3">LPDDR3</option>
+        </select><br>
+
+        <label for="ssd">SSD (in GB):</label>
+        <select name="ssd" id="ssd" required>
+            <option value="0 GB">0 GB</option>
+            <option value="512 GB">512 GB</option>
+            <option value="256 GB">256 GB</option>
+            <option value="128 GB">128 GB</option>
+            <option value="1024 GB">1024 GB</option>
+            <option value="2048 GB">2048 GB</option>
+            <option value="3072 GB">3072 GB</option>
+        </select><br>
+
+        <label for="hdd">HDD (in GB):</label>
+        <select name="hdd" id="hdd" required>
+            <option value="1024 GB">1024 GB</option>
+            <option value="0 GB">0 GB</option>
+            <option value="512 GB">512 GB</option>
+            <option value="2048 GB">2048 GB</option>
+        </select><br>
+
+        <label for="os">Operating System:</label>
+        <select name="os" id="os" required>
+            <option value="Windows">Windows</option>
+            <option value="DOS">DOS</option>
+            <option value="Mac">Mac</option>
+        </select><br>
+
+        <label for="os_bit">Operating System Bit:</label>
+        <select name="os_bit" id="os_bit" required>
+            <option value="64-bit">64-bit</option>
+            <option value="32-bit">32-bit</option>
+        </select><br>
+
+        <label for="graphic_card_gb">Graphic Card (in GB):</label>
+        <select name="graphic_card_gb" id="graphic_card_gb" required>
+            <option value="0 GB">0 GB</option>
+            <option value="2 GB">2 GB</option>
+            <option value="4 GB">4 GB</option>
+            <option value="6 GB">6 GB</option>
+            <option value="8 GB">8 GB</option>
+        </select><br>
+
+        <label for="weight">Weight:</label>
+        <select name="weight" id="weight" required>
+            <option value="Casual">Casual</option>
+            <option value="ThinNlight">ThinNlight</option>
+            <option value="Gaming">Gaming</option>
+        </select><br>
+
+        <label for="warranty">Warranty:</label>
+        <select name="warranty" id="warranty" required>
+            <option value="No warranty">No warranty</option>
+            <option value="1 year">1 year</option>
+            <option value="2 years">2 years</option>
+            <option value="3 years">3 years</option>
+        </select><br>
+
+        <label for="Touchscreen">Touchscreen:</label>
+        <select name="Touchscreen" id="Touchscreen" required>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select><br>
+
+        <label for="msoffice">MS Office:</label>
+        <select name="msoffice" id="msoffice" required>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select><br>
+
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating" required>
+            <option value="2 stars">2 stars</option>
+            <option value="3 stars">3 stars</option>
+            <option value="4 stars">4 stars</option>
+            <option value="5 stars">5 stars</option>
+            <option value="1 star">1 star</option>
+        </select><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    
+</body>
+</html>
