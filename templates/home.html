@@ -9,7 +9,7 @@
     <h4>
         The laptop price is {{results}} $
     </h4>
-    <form action="/" method="POST">
+    <form action="{{ url_for('index') }}" method="POST">
         <label for="brand">Brand:</label>
         <select name="brand" id="brand" required>
             <option value="ASUS">ASUS</option>
