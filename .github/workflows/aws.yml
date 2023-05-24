@@ -85,8 +85,6 @@ jobs:
         run: |
           docker stop laptop-price || true
           docker rm -f laptop-price || true
-          docker stop mltest || true
-          docker rm -f mltest || true
 
       - name: Pull latest images
         run: |
