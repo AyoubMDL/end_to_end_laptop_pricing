@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . /app
 
 RUN apt update -y && apt install awscli -y
-RUN sudo apt-get install libgomp1
+RUN apt-get install libgomp1
 
 RUN pip install -r requirements.txt
 
